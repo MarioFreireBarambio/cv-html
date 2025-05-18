@@ -14,7 +14,7 @@
       color: #4b3b2d;
     }
     .container {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 30px 20px;
     }
@@ -30,6 +30,18 @@
       font-style: italic;
       color: #6e5f52;
       margin-bottom: 15px;
+    }
+    .photo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .photo img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #d8c9bb;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .card {
       background-color: #fffdfb;
@@ -54,6 +66,23 @@
     .info p {
       margin: 5px 0;
     }
+    details summary {
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 8px;
+      background-color: #f1e8de;
+      border: 1px solid #d8c9bb;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    details[open] summary {
+      background-color: #e7ddd2;
+    }
+    details p, details ul {
+      padding: 10px 15px;
+      margin: 0;
+    }
     @media (max-width: 600px) {
       .container {
         padding: 20px 10px;
@@ -66,9 +95,17 @@
 </head>
 <body>
   <div class="container">
+    <div class="photo">
+      <img src="foto.JPG" alt="Foto de Mario Freire" />
+    </div>
     <div class="header">
       <h1>Mario Freire Barambio</h1>
       <p class="subtitle">Con muchas ganas de aprender, mejorar cada día y poner en práctica todo lo aprendido para crecer tanto personal como profesionalmente.</p>
+    </div>
+
+    <div class="card">
+      <h2>Sobre mí</h2>
+      <p>Soy un estudiante de último año de Ingeniería Informática, especializado en desarrollo de software, con una actitud proactiva y muchas ganas de aprender. Me interesa especialmente el desarrollo web y el diseño de soluciones tecnológicas que aporten valor real. Me implico al máximo en los proyectos, tanto a nivel técnico como humano, y busco crecer profesionalmente en entornos donde se fomente la creatividad, la mejora continua y el trabajo bien hecho.</p>
     </div>
 
     <div class="card info">
@@ -80,36 +117,69 @@
 
     <div class="card">
       <h2>Formación académica</h2>
-      <ul>
-        <li>Grado en Ingeniería Informática – Universidad de A Coruña (FIC), 2022–2025 (finalizado en 4 años)</li>
-        <li>Interés en cursar el Máster Universitario en Ingeniería Informática (MUEI)</li>
-      </ul>
+      <details open>
+        <summary>Grado en Ingeniería Informática</summary>
+        <ul>
+          <li>Universidad de A Coruña (FIC)</li>
+          <li>2022–2025 (completado en 4 años)</li>
+          <li>Especialización en desarrollo de software</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Objetivos futuros</summary>
+        <ul>
+          <li>Interés en cursar el Máster Universitario en Ingeniería Informática (MUEI)</li>
+        </ul>
+      </details>
     </div>
 
     <div class="card">
       <h2>Experiencia y proyectos</h2>
-      <ul>
-        <li><strong>Trabajo de Fin de Grado:</strong> Aplicación web para jóvenes emprendedores del sector textil. Permite a quienes desean lanzar su marca de ropa dar a conocer sus productos. Incluye una sección “Coming Soon” con likes y comentarios para fomentar el feedback con los clientes.</li>
-      </ul>
+      <details open>
+        <summary>Trabajo de Fin de Grado</summary>
+        <p>Aplicación web para jóvenes emprendedores del sector textil. Permite a quienes desean lanzar su marca de ropa dar a conocer sus productos. Incluye una sección “Coming Soon” con likes y comentarios para fomentar el feedback con los clientes.</p>
+      </details>
     </div>
 
     <div class="card">
       <h2>Habilidades técnicas</h2>
-      <ul>
-        <li><strong>Lenguajes:</strong> Java, JavaScript, HTML, CSS, SQL</li>
-        <li><strong>Frameworks:</strong> Spring Boot, React, Redux</li>
-        <li><strong>Bases de datos:</strong> PostgreSQL</li>
-        <li><strong>Herramientas:</strong> Git, GitHub, Postman, Maven, NPM, VSCode, Taiga, Balsamiq</li>
-        <li><strong>Otros:</strong> API REST, patrón MVC, JWT, Bootstrap</li>
-      </ul>
+      <details open>
+        <summary>Lenguajes y frameworks</summary>
+        <ul>
+          <li>Java, JavaScript, HTML, CSS, SQL</li>
+          <li>Spring Boot, React, Redux</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Bases de datos y arquitectura</summary>
+        <ul>
+          <li>PostgreSQL</li>
+          <li>API REST, patrón MVC</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Herramientas de desarrollo</summary>
+        <ul>
+          <li>Git, GitHub, Postman, Maven, NPM, VSCode</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Otras tecnologías</summary>
+        <ul>
+          <li>JWT, Bootstrap, Taiga, Balsamiq</li>
+        </ul>
+      </details>
     </div>
 
     <div class="card">
       <h2>Idiomas</h2>
-      <ul>
-        <li>Español: Nativo</li>
-        <li>Inglés: Nivel intermedio (equivalente a B2, sin título oficial por el momento)</li>
-      </ul>
+      <details open>
+        <summary>Nivel lingüístico</summary>
+        <ul>
+          <li>Español: Nativo</li>
+          <li>Inglés: Nivel intermedio (equivalente a B2, sin título oficial por el momento)</li>
+        </ul>
+      </details>
     </div>
   </div>
 </body>
