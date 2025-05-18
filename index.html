@@ -6,88 +6,126 @@
   <title>Currículum Mario Freire Barambio</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f7f3ef;
+      --text: #3d3329;
+      --accent: #a68b6b;
+      --card: #fffdfb;
+      --border: #e4d8cc;
+      --hover: #f0e8df;
+    }
+
     body {
       font-family: 'Quicksand', sans-serif;
-      background-color: #f6f1eb;
+      background-color: var(--bg);
+      color: var(--text);
       margin: 0;
       padding: 0;
-      color: #4b3b2d;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
+
     .header {
       text-align: center;
       margin-bottom: 30px;
     }
-    .header h1 {
-      margin: 10px 0;
-      font-size: 32px;
+
+    .photo {
+      text-align: center;
+      margin: 30px 0 15px;
     }
+
+    .photo img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
     .subtitle {
       font-style: italic;
       color: #6e5f52;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
-    .photo {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .photo img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #d8c9bb;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+
     .card {
-      background-color: #fffdfb;
-      border: 1px solid #e0d6cc;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 2px 2px 8px rgba(100, 80, 60, 0.08);
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 2px 2px 10px rgba(80, 60, 40, 0.05);
     }
+
     .card h2 {
-      margin-top: 0;
-      color: #5a4536;
+      color: var(--accent);
       border-bottom: 1px solid #ddd0c4;
       padding-bottom: 6px;
+      margin-top: 0;
     }
-    ul {
-      padding-left: 20px;
+
+    details {
+      margin-bottom: 15px;
+      border-radius: 6px;
+      overflow: hidden;
     }
-    li {
-      margin-bottom: 8px;
-    }
-    .info p {
-      margin: 5px 0;
-    }
-    details summary {
+
+    summary {
       font-weight: 600;
       font-size: 16px;
-      cursor: pointer;
-      padding: 8px;
-      background-color: #f1e8de;
-      border: 1px solid #d8c9bb;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-    details[open] summary {
-      background-color: #e7ddd2;
-    }
-    details p, details ul {
       padding: 10px 15px;
-      margin: 0;
+      background-color: #f3ece5;
+      cursor: pointer;
+      border: 1px solid #ddd0c4;
     }
+
+    summary:hover {
+      background-color: var(--hover);
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid #ddd0c4;
+      border-radius: 6px 6px 0 0;
+    }
+
+    details div {
+      background-color: #fffdfb;
+      padding: 12px 20px;
+      border: 1px solid #ddd0c4;
+      border-top: none;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .info p {
+      margin: 6px 0;
+    }
+
     @media (max-width: 600px) {
       .container {
         padding: 20px 10px;
       }
-      .header h1 {
+
+      h1 {
         font-size: 26px;
       }
     }
@@ -95,9 +133,11 @@
 </head>
 <body>
   <div class="container">
+
     <div class="photo">
       <img src="foto.JPG" alt="Foto de Mario Freire" />
     </div>
+
     <div class="header">
       <h1>Mario Freire Barambio</h1>
       <p class="subtitle">Con muchas ganas de aprender, mejorar cada día y poner en práctica todo lo aprendido para crecer tanto personal como profesionalmente.</p>
@@ -105,10 +145,10 @@
 
     <div class="card">
       <h2>Sobre mí</h2>
-      <p>Soy un estudiante de último año de Ingeniería Informática, especializado en desarrollo de software, con una actitud proactiva y muchas ganas de aprender. Me interesa especialmente el desarrollo web y el diseño de soluciones tecnológicas que aporten valor real. Me implico al máximo en los proyectos, tanto a nivel técnico como humano, y busco crecer profesionalmente en entornos donde se fomente la creatividad, la mejora continua y el trabajo bien hecho.</p>
+      <p>Soy estudiante de Ingeniería Informática especializado en desarrollo de software. Me esfuerzo por aplicar buenas prácticas de programación, aprender de cada proyecto y construir soluciones útiles. Me interesa la tecnología como herramienta para generar impacto real, y valoro especialmente los entornos donde se trabaja con rigor, colaboración y mejora continua.</p>
     </div>
 
-    <div class="card info">
+    <div class="card">
       <h2>Información de contacto</h2>
       <p><strong>Email:</strong> freirebarambiomario@gmail.com</p>
       <p><strong>Teléfono:</strong> 685 706 317</p>
@@ -117,70 +157,87 @@
 
     <div class="card">
       <h2>Formación académica</h2>
-      <details open>
+      <details>
         <summary>Grado en Ingeniería Informática</summary>
-        <ul>
-          <li>Universidad de A Coruña (FIC)</li>
-          <li>2022–2025 (completado en 4 años)</li>
-          <li>Especialización en desarrollo de software</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Universidad de A Coruña (FIC)</li>
+            <li>2022–2025 (completado en 4 años)</li>
+            <li>Rama de desarrollo de software</li>
+          </ul>
+        </div>
       </details>
       <details>
-        <summary>Objetivos futuros</summary>
-        <ul>
-          <li>Interés en cursar el Máster Universitario en Ingeniería Informática (MUEI)</li>
-        </ul>
+        <summary>Objetivos formativos</summary>
+        <div>
+          <ul>
+            <li>Interés en cursar el Máster Universitario en Ingeniería Informática (MUEI)</li>
+          </ul>
+        </div>
       </details>
     </div>
 
     <div class="card">
-      <h2>Experiencia y proyectos</h2>
-      <details open>
+      <h2>Proyectos destacados</h2>
+      <details>
         <summary>Trabajo de Fin de Grado</summary>
-        <p>Aplicación web para jóvenes emprendedores del sector textil. Permite a quienes desean lanzar su marca de ropa dar a conocer sus productos. Incluye una sección “Coming Soon” con likes y comentarios para fomentar el feedback con los clientes.</p>
+        <div>
+          <p>Aplicación web para promover marcas emergentes de ropa. La plataforma permite a diseñadores sin recursos dar a conocer sus productos, gestionar catálogos y recibir feedback mediante una sección de productos en desarrollo (“Coming Soon”) con likes y comentarios de los usuarios.</p>
+        </div>
       </details>
     </div>
 
     <div class="card">
       <h2>Habilidades técnicas</h2>
-      <details open>
+      <details>
         <summary>Lenguajes y frameworks</summary>
-        <ul>
-          <li>Java, JavaScript, HTML, CSS, SQL</li>
-          <li>Spring Boot, React, Redux</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Java, JavaScript, HTML, CSS, SQL</li>
+            <li>Spring Boot, React, Redux</li>
+          </ul>
+        </div>
       </details>
       <details>
         <summary>Bases de datos y arquitectura</summary>
-        <ul>
-          <li>PostgreSQL</li>
-          <li>API REST, patrón MVC</li>
-        </ul>
+        <div>
+          <ul>
+            <li>PostgreSQL, MySQL (nivel medio)</li>
+            <li>API REST, patrón MVC</li>
+          </ul>
+        </div>
       </details>
       <details>
         <summary>Herramientas de desarrollo</summary>
-        <ul>
-          <li>Git, GitHub, Postman, Maven, NPM, VSCode</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Git, GitHub, VSCode, Postman, Maven, NPM</li>
+          </ul>
+        </div>
       </details>
       <details>
         <summary>Otras tecnologías</summary>
-        <ul>
-          <li>JWT, Bootstrap, Taiga, Balsamiq</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Bootstrap, JWT, Taiga, Balsamiq</li>
+          </ul>
+        </div>
       </details>
     </div>
 
     <div class="card">
       <h2>Idiomas</h2>
-      <details open>
-        <summary>Nivel lingüístico</summary>
-        <ul>
-          <li>Español: Nativo</li>
-          <li>Inglés: Nivel intermedio (equivalente a B2, sin título oficial por el momento)</li>
-        </ul>
+      <details>
+        <summary>Nivel actual</summary>
+        <div>
+          <ul>
+            <li>Español: Nativo</li>
+            <li>Inglés: Nivel intermedio (B2, en preparación)</li>
+          </ul>
+        </div>
       </details>
     </div>
+
   </div>
 </body>
 </html>
